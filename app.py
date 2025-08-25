@@ -22,8 +22,12 @@ st.header("Monthy sales demo")
 
 st.write(pd.DataFrame({"A": [1,2], "B": [3, 4]}))
 
-if st.button("Click me"):
-    st.success("Button clicked!")
-    st.balloons()
+# if st.button("Click me"):
+#     st.success("Button clicked!")
+#     st.balloons()
 
+# st.table(df.head())
+st.metric(label="Revenue", value="100000", delta="+5%")
 
+st.sidebar.title("Filters")
+options = st.sidebar.selectbox("Select Option", ["North", "South"])
